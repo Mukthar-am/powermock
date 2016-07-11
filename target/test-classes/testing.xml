@@ -1,0 +1,7 @@
+<suite name="PowerMock-Suite" verbose="10" object-factory="org.powermock.modules.testng.PowerMockObjectFactory">
+    <test name="PowerMock-Tests">
+        <classes>
+            <class name="com.muks.employee.EmployeeTests"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="PowerMock-Suite" duration-ms="17" started-at="2016-07-11T12:09:08Z" finished-at="2016-07-11T12:09:08Z">
+    <groups>
+    </groups>
+    <test name="PowerMock-Tests" duration-ms="17" started-at="2016-07-11T12:09:08Z" finished-at="2016-07-11T12:09:08Z">
+      <class name="com.muks.employee.EmployeeTests">
+        <test-method status="PASS" signature="testMyFirst()[pri:0, instance:com.muks.employee.EmployeeTests@47f37ef1]" name="testMyFirst" duration-ms="7" started-at="2016-07-11T17:39:08Z" finished-at="2016-07-11T17:39:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMyFirst -->
+      </class> <!-- com.muks.employee.EmployeeTests -->
+    </test> <!-- PowerMock-Tests -->
+  </suite> <!-- PowerMock-Suite -->
+</testng-results>
