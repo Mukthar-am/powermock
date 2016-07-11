@@ -1,8 +1,6 @@
 package com.muks.powermock.employee;
 
 
-import com.muks.powermock.employee.employee.EmployeeController;
-import com.muks.powermock.employee.employee.EmployeeService;
 import org.powermock.api.mockito.PowerMockito;
 import org.testng.Assert;
 import org.testng.annotations.Test;

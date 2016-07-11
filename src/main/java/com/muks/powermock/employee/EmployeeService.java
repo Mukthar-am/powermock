@@ -1,4 +1,4 @@
-package com.muks.powermock.employee.employee;
+package com.muks.powermock.employee;
 
 /**
  * Created by 15692 on 04/07/16.
