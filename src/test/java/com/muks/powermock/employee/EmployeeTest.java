@@ -1,6 +1,7 @@
 package com.muks.powermock.employee;
 
 
+import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -36,5 +37,18 @@ public class EmployeeTest {
 
         EmployeeController employeeController = new EmployeeController(mock);
         Assert.assertEquals(16, employeeController.getProjectedEmployeeCount());
+    }
+
+    @Test
+    public void verifyMethodInvokationTest() {
+        EmployeeService mock =PowerMockito.mock(EmployeeService.class);
+        EmployeeController employeeController = new EmployeeController(mock);
+
+        Employee employee = new Employee();
+        //employeeController.saveEmployee(employee);
+
+        //Verifying that controller did call the
+        //saveEmployee() method on the mocked service instance.
+        Mockito.verify(mock).saveEmployee(employee);
     }
 }
