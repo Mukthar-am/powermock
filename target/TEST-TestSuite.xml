@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.muks.powermock.employee.EmployeeTest" time="0.122" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="0.13" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib"/>
@@ -23,8 +23,7 @@
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.io.tmpdir" value="/var/folders/tv/npm3lxs14l37gt5fth9cfxxjbfpthf/T/"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="classworlds.conf" value="//Users/15692/Data/progs/apache-maven-3.3.9/bin/m2.conf"/>
@@ -63,8 +62,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.muks.powermock.employee.EmployeeTest" name="firstMockTest" time="0.122"/>
-  <testcase classname="com.muks.powermock.employee.EmployeeTest" name="shouldGetCountOfEmployeesTest" time="0"/>
-  <testcase classname="com.muks.powermock.employee.EmployeeTest" name="testMyFirst" time="0"/>
-  <testcase classname="com.muks.powermock.employee.EmployeeTest" name="testMySecond" time="0"/>
+  <testcase name="firstMockTest" classname="com.muks.powermock.employee.EmployeeTest" time="0.123"/>
+  <testcase name="shouldGetCountOfEmployeesTest" classname="com.muks.powermock.employee.EmployeeTest" time="0"/>
+  <testcase name="testMyFirst" classname="com.muks.powermock.employee.EmployeeTest" time="0"/>
+  <testcase name="testMySecond" classname="com.muks.powermock.employee.EmployeeTest" time="0"/>
+  <testcase name="verifyMethodInvokationTest" classname="com.muks.powermock.employee.EmployeeTest" time="0.007"/>
 </testsuite>

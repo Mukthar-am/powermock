@@ -1,5 +1,22 @@
-<suite name="PowerMock-Suite" verbose="10" object-factory="org.powermock.modules.testng.PowerMockObjectFactory">
-    <test name="PowerMock-Tests">
+<!--<suite name="PowerMock-Suite" verbose="10" object-factory="org.powermock.modules.testng.PowerMockObjectFactory">-->
+<!--<test name="PowerMock-Tests">-->
+<!--<classes>-->
+<!--<class name="com.muks.powermock.employee.EmployeeTest"/>-->
+<!--</classes>-->
+<!--</test>-->
+<!--</suite>-->
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1" verbose="1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Regression Test Suite">
+        <!--<packages>-->
+        <!--<package name="packOne" />-->
+        <!--<package name="packTwo" />-->
+        <!--</packages>-->
         <classes>
             <class name="com.muks.powermock.employee.EmployeeTest"/>
         </classes>

@@ -12,8 +12,14 @@
         <powermock.version>1.6.5</powermock.version>
     </properties>
 
-    <dependencies>
+    <repositories>
+        <repository>
+            <id>java-net</id>
+            <url>http://download.java.net/maven/2</url>
+        </repository>
+    </repositories>
 
+    <dependencies>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -39,24 +45,41 @@
             <version>RELEASE</version>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+        <dependency>
+            <groupId>org.uncommons</groupId>
+            <artifactId>reportng</artifactId>
+            <version>1.1.2</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/velocity/velocity-dep -->
+        <dependency>
+            <groupId>velocity</groupId>
+            <artifactId>velocity-dep</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- To avoid “ClassNotFoundException: com.google.inject.Module” exception  -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>3.0</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Following plugin executes the testng tests -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.14.1</version>
-                <configuration>
-                    <!-- Suite testng xml file to consider for test execution -->
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/testing.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
-
-
             <!-- Compiler plugin configures the java version to be usedfor compiling the code -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -65,6 +88,32 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.14.1</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>src/test/resources/test-suite.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value>
+                        </property>
+                    </properties>
+                    <reportsDirectory>target/</reportsDirectory>
+
+                </configuration>
+            </plugin>
+
+
         </plugins>
     </build>
 

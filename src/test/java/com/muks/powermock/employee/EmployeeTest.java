@@ -45,7 +45,7 @@ public class EmployeeTest {
         EmployeeController employeeController = new EmployeeController(mock);
 
         Employee employee = new Employee();
-        //employeeController.saveEmployee(employee);
+        employeeController.saveEmployee(employee);
 
         //Verifying that controller did call the
         //saveEmployee() method on the mocked service instance.
